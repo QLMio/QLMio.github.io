@@ -1,0 +1,60 @@
+#rightside {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 100;
+  opacity: 1;
+  transition: all .5s, width .3s, height .3s;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 5px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+#rightside > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+#rightside > div > button,
+#rightside > div > a {
+  margin: 5px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  text-align: center;
+  font-size: 16px;
+  line-height: 35px;
+  transition: background-color .3s, transform .3s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#rightside > div > button:hover,
+#rightside > div > a:hover {
+  background-color: var(--btn-hover-color);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  #switch-commentBarrage {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  #mobile-toc-button {
+    display: block;
+  }
+
+  #hide-aside-btn {
+    display: none;
+  }
+}
